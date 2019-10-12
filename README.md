@@ -1,1 +1,2 @@
-# ps-first-spring-boot-app
+# Pluralsight Spring Boot Application Resources
+## Dan Bunker
