@@ -1,4 +1,4 @@
-#Postgres Setup
+# Postgres Course Setup
 
 ## Docker Postgres Setup
 
@@ -23,6 +23,8 @@ Connection Info:
     Password: `Welcome`
 
 Note: This stores the data inside the container - when you delete the container, the data is deleted as well.
+
+## Application Database Setup
 
 Create the Database:
 
