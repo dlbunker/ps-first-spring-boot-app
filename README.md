@@ -1,2 +1,2 @@
 # Pluralsight Spring Boot Application Resources
-## Dan Bunker
+## Author: Dan Bunker
