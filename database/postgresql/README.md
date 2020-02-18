@@ -12,7 +12,7 @@ Start container:
 
 Stop container:
 
-    docker start postgres-demo
+    docker stop postgres-demo
 
 Connection Info:
 
