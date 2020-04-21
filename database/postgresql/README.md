@@ -16,7 +16,7 @@ Stop container:
 
 Connection Info:
 
-    JDBC URL: `jdbc:postgresql://localhost:5432/postgres`
+    JDBC URL: `jdbc:postgresql://localhost:5432/conference_app`
 
     Username: `postgres`
 
