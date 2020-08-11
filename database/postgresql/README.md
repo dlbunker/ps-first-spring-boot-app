@@ -1,6 +1,6 @@
 # Postgres Course Setup
 
-## Docker Postgres Setup
+## Docker Postgres Setup (using just docker)
 
 Create Docker container with Postgres database:
 
@@ -13,6 +13,18 @@ Start container:
 Stop container:
 
     docker stop postgres-demo
+
+## Docker Postgres Setup (using docker-compose)
+
+Navigate to directory containing docker-compose.yml
+
+Create and start container:
+
+    docker-compose up -d
+
+Stop container:
+
+    docker-compose down
 
 Connection Info:
 
