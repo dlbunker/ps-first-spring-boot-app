@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  postgres-demo:
+    image: postgres:11.5-alpine
+    container_name: postgres-demo
+    environment:
+    - POSTGRES_PASSWORD=Welcome
+    ports:
+    - 5432:5432
