@@ -45,9 +45,9 @@ CREATE TABLE discount_codes
 CREATE TABLE attendee_tickets
 (
     attendee_ticket_id SERIAL PRIMARY KEY,
-    attendee_id        integer       NOT NULL REFERENCES attendees (attendee_id),
-    ticket_price_id    integer       NOT NULL REFERENCES ticket_prices (ticket_price_id),
-    discount_code_id   integer       NULL REFERENCES discount_codes (discount_code_id),
+    attendee_id        BIGINT UNSIGNED       NOT NULL REFERENCES attendees (attendee_id),
+    ticket_price_id    BIGINT UNSIGNED       NOT NULL REFERENCES ticket_prices (ticket_price_id),
+    discount_code_id   BIGINT UNSIGNED       NULL REFERENCES discount_codes (discount_code_id),
     net_price          numeric(8, 2) NOT NULL
 );
 
@@ -71,8 +71,8 @@ CREATE TABLE sessions
 CREATE TABLE session_schedule
 (
     schedule_id  SERIAL PRIMARY KEY,
-    time_slot_id integer     NOT NULL REFERENCES time_slots (time_slot_id),
-    session_id   integer     NOT NULL REFERENCES sessions (session_id),
+    time_slot_id BIGINT UNSIGNED     NOT NULL REFERENCES time_slots (time_slot_id),
+    session_id   BIGINT UNSIGNED     NOT NULL REFERENCES sessions (session_id),
     room         varchar(30) NOT NULL
 );
 
@@ -84,8 +84,8 @@ CREATE TABLE tags
 
 CREATE TABLE session_tags
 (
-    session_id integer NOT NULL REFERENCES sessions (session_id),
-    tag_id     integer NOT NULL REFERENCES tags (tag_id)
+    session_id BIGINT UNSIGNED NOT NULL REFERENCES sessions (session_id),
+    tag_id     BIGINT UNSIGNED NOT NULL REFERENCES tags (tag_id)
 );
 
 CREATE TABLE speakers
@@ -101,8 +101,8 @@ CREATE TABLE speakers
 
 CREATE TABLE session_speakers
 (
-    session_id integer NOT NULL REFERENCES sessions (session_id),
-    speaker_id integer NOT NULL REFERENCES speakers (speaker_id)
+    session_id BIGINT UNSIGNED NOT NULL REFERENCES sessions (session_id),
+    speaker_id BIGINT UNSIGNED NOT NULL REFERENCES speakers (speaker_id)
 );
 
 CREATE TABLE workshops
@@ -117,12 +117,12 @@ CREATE TABLE workshops
 
 CREATE TABLE workshop_speakers
 (
-    workshop_id integer NOT NULL REFERENCES workshops (workshop_id),
-    speaker_id  integer NOT NULL REFERENCES speakers (speaker_id)
+    workshop_id BIGINT UNSIGNED NOT NULL REFERENCES workshops (workshop_id),
+    speaker_id  BIGINT UNSIGNED NOT NULL REFERENCES speakers (speaker_id)
 );
 
 CREATE TABLE workshop_registrations
 (
-    workshop_id        integer NOT NULL REFERENCES workshops (workshop_id),
-    attendee_ticket_id integer NOT NULL REFERENCES attendee_tickets (attendee_ticket_id)
+    workshop_id        BIGINT UNSIGNED NOT NULL REFERENCES workshops (workshop_id),
+    attendee_ticket_id BIGINT UNSIGNED NOT NULL REFERENCES attendee_tickets (attendee_ticket_id)
 );
