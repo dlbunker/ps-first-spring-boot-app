@@ -43,6 +43,10 @@ Install the Data:
     
 Note: The if you are using Docker, the last two steps can be done like so:
 
+Create the Database:
+
+    docker exec -it postgres-demo createdb conference_app -U postgres
+
 Setup the Tables:
 
     docker cp create_tables.sql postgres-demo:/create_tables.sql
